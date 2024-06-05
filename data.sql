@@ -1,17 +1,13 @@
-INSERT INTO public.addition (add_name,add_amt,courier_id,invoice_id) VALUES
-	 ('Insurance Fee',57700.00,NULL,1),
-	 ('Service Fee',1000.00,NULL,1),
-	 ('Application Fee',1000.00,NULL,1),
-	 ('Delivery Fee',126000.00,NULL,1);
+INSERT INTO public.addition (add_name,add_amt,invoice_id) VALUES
+	 ('Service Fee',1000.00,1),
+	 ('Application Fee',1000.00,1);
 INSERT INTO public.courier (courier_name,delivery_opt,delivery_fee) VALUES
 	 ('J & T','Reguler',126000.00);
-INSERT INTO public.insurance (insurance_name) VALUES
-	 ('Delivery Insurance from Tokopedia');
-INSERT INTO public.invoice (invoice_number,order_id,total_fee_amt,courier_id,pymt_id,invoice_amount) VALUES
-	 ('INV/20330311/MPL/3694776524',1,185700,1,1,NULL);
-INSERT INTO public."order" (user_id,order_price,order_date) VALUES
-	 (1,20500000.00,'2024-06-03');
-INSERT INTO public.order_item (product_id,quantity,total_price,order_id) VALUES
+INSERT INTO public.insurance (insurance_name,insurance_fee) VALUES
+	 ('Delivery Insurance from Tokopedia',57700.00);
+INSERT INTO public.invoice (invoice_number,total_fee_amt,courier_id,pymt_id,seller_id,insurance_id,buyer_id,invoice_date) VALUES
+	 ('INV/20330311/MPL/3694776524',2000.00,1,1,1,1,2,'2024-05-22');
+INSERT INTO public.order_item (product_id,quantity,total_price,invoice_id) VALUES
 	 (1,1,20500000.00,1);
 INSERT INTO public.product (product_name,product_price,product_weight_grams) VALUES
 	 ('SAPPHIRE NITRO+ RADEON RX 7900 XTX 24GB',20500000,5000);
