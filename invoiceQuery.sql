@@ -36,7 +36,7 @@ inner join (
 	where add_id = 2
 ) a2 on a2.invoice_id = inv.invoice_id
 inner join addition a3 on a3.invoice_id = inv.invoice_id
-inner join pymt_method pm on pm.pymt_id = inv.pymt_id 
+inner join pymt_method pm on pm.pymt_id = inv.pymt_id
 group by inv.invoice_number,
 u.user_name,
 u2.user_name,
